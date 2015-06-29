@@ -3,10 +3,12 @@ class ListsController < ApplicationController
     @lists = List.all
     render :index
   end
+
   def show
     @list = List.find(params[:id])
     render :show
   end
+
   def new
     @list = List.new
     render :new
@@ -36,6 +38,8 @@ class ListsController < ApplicationController
       render :edit
     end
   end
+
+
 
   def destroy
     @list = List.find(params[:id])
