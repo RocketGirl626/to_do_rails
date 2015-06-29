@@ -32,3 +32,9 @@
 <p><%= link_to "Delete", list_path(@list),
                          :data => {:confirm => "You sure?",
                                    :method => "delete"} %></p>
+
+<h4>Here is all the tasks that are actually done:</h4>
+
+<% @tasks.each do |t| %>
+<li><%=t.description %></li>
+<% end %>
